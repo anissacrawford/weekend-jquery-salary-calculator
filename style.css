@@ -7,3 +7,6 @@ table, td, th{
     border-collapse: collapse;
 }
 
+.highlight {
+    background-color: red;
+}

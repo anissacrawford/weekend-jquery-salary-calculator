@@ -17,9 +17,9 @@ function addEmployee (){
     let newEmployee = {
         firstName: $(firstName).val(),
         lastName: $(lastName).val(),
-        id: $(id).val(),
+        id: Number($(id).val()),
         title: $(title).val(),
-        salary: $(salary).val(),
+        salary: Number($(salary).val()),
     }
 
     //pushes to employees array 
@@ -36,8 +36,11 @@ function addEmployee (){
     addToDom();
 }
 
-
+//adds table with inputs to DOM 
 function addToDom(){
+
+$('#tableBody').empty()
+
 for (let employee of employees){
     $('#tableBody').append(
         `<tr>
@@ -49,4 +52,25 @@ for (let employee of employees){
         </tr>`
     )
     }
+    calcMonthlyCost();
+
 }
+
+//calculates Monthly Cost 
+function calcMonthlyCost(){
+    let monthlyCost = 0;
+    //need inputs of all salaries divided by 12 
+    for (let employee of employees){
+        monthlyCost += employee.salary;
+    }
+
+    let totalMonthlyCost = monthlyCost / 12;
+
+    if (totalMonthlyCost >= 20000){
+        $('#totalMonthly').addClass('highlight');
+    }
+
+    $('#totalMonthly').empty();
+    $('#totalMonthly').append(totalMonthlyCost);
+}
+
