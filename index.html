@@ -16,14 +16,48 @@
 
 <body>
 
+    <header>
+        <h1>SALARY CALCULATOR</h1>
+    </header>
+
     <!-- input boxes -->
     <div>
-        <p>Add Employee:</p>
-        <input type="text" placeholder="First Name">
-        <input type="text" placeholder="Last Name">
-        <input type="number" placeholder="ID">
-        <input type="text" placeholder="Title">
-        <input type="number" placeholder="Annual Salary">
+        <h2>Add Employee:</h2>
+        <input type="text" placeholder="FIRST NAME" id="firstName">
+        <input type="text" placeholder="LAST NAME" id="lastName">
+        <input type="number" placeholder="ID" id="id">
+        <input type="text" placeholder="TITLE" id="title">
+        <input type="number" placeholder="ANNUAL SALARY" id="salary">
+    </div>
+
+    <!-- submit button -->
+    <button id="submitBtn">SUBMIT</button>
+
+    <!-- table -->
+    <div>
+        <h2>Employees:</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>FIRST NAME</th>
+                    <th>LAST NAME</th>
+                    <th>ID</th>
+                    <th>TITLE</th>
+                    <th>ANNUAL SALARY</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Jen</td>
+                    <td>Barber</td>
+                    <td>4521</td>
+                    <td>Team Lead</td>
+                    <td>$80,000</td>
+                </tr>
+            </tbody>
+
+        </table>
     </div>
     
 </body>
