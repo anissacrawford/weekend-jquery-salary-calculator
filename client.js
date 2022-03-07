@@ -74,3 +74,5 @@ function calcMonthlyCost(){
     $('#totalMonthly').append(totalMonthlyCost);
 }
 
+//need delete button 
+
