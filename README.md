@@ -1,7 +1,8 @@
 
 # Project Name
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+
+
 
 ## Description
 
@@ -40,3 +41,4 @@ Thanks to Prime Digital Academy who equipped and helped me to make this applicat
 ## Support 
 
 If you have any issues, please email me at anissacrawford@gmail.com 
+

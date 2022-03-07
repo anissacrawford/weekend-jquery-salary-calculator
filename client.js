@@ -82,7 +82,7 @@ function calcMonthlyCost(){
  function deleteBtn (){
     //  $('#deleteBtn').remove(${employee.salary}) //cant get button working
     $(this).closest('tr').remove();
-    // employees.pop() //delete employee
+    // employees.pop() //deletes employee not employee you target ``
  }
 
 
