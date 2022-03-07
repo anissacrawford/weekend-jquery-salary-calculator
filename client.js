@@ -34,7 +34,7 @@ function addEmployee (){
     $(salary).val('');
 
     addToDom();
-}
+};
 
 //adds table with inputs to DOM 
 function addToDom(){
@@ -48,13 +48,14 @@ for (let employee of employees){
         <td>${employee.lastName}</td>
         <td>${employee.id}</td>
         <td>${employee.title}</td>
-        <td>${employee.salary}</td>
+        <td>${employee.salary}<button id="deleteBtn">DELETE</button></td>
         </tr>`
     )
     }
     calcMonthlyCost();
+    // $('#deleteBtn').on('click', deleteBtn)
 
-}
+};
 
 //calculates Monthly Cost 
 function calcMonthlyCost(){
@@ -72,7 +73,11 @@ function calcMonthlyCost(){
 
     $('#totalMonthly').empty();
     $('#totalMonthly').append(totalMonthlyCost);
-}
+};
 
 //need delete button 
+//  function deleteBtn (){
+//      $('#deleteBtn').remove(${employee.salary}) //cant get button working
+//  }
+
 

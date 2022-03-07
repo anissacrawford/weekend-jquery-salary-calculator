@@ -1,5 +1,5 @@
 * {
-    background-color: white;
+    background-color: lightgrey;
 }
 
 table, td, th{
@@ -9,4 +9,12 @@ table, td, th{
 
 .highlight {
     background-color: red;
+}
+
+h1 {
+    text-align: center;
+}
+
+.totalMonthly {
+    text-align: center;
 }
