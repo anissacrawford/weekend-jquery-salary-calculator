@@ -8,6 +8,7 @@ function ready(){
 
     // console.log('hi')
     $('#submitBtn').on('click', addEmployee);
+    $('body').on('click', '.deleteBtn', deleteBtn);
 
 };
 
@@ -32,6 +33,7 @@ function addEmployee (){
     $(id).val('');
     $(title).val('');
     $(salary).val('');
+    //could also use $('input').val('') to clear all inputs at once 
 
     addToDom();
 };
@@ -48,18 +50,19 @@ for (let employee of employees){
         <td>${employee.lastName}</td>
         <td>${employee.id}</td>
         <td>${employee.title}</td>
-        <td>${employee.salary}<button id="deleteBtn">DELETE</button></td>
+        <td>${employee.salary}</td>
+        <td><button class="deleteBtn">DELETE</button></td>
         </tr>`
     )
     }
     calcMonthlyCost();
-    // $('#deleteBtn').on('click', deleteBtn)
 
 };
 
 //calculates Monthly Cost 
 function calcMonthlyCost(){
     let monthlyCost = 0;
+
     //need inputs of all salaries divided by 12 
     for (let employee of employees){
         monthlyCost += employee.salary;
@@ -76,8 +79,10 @@ function calcMonthlyCost(){
 };
 
 //need delete button 
-//  function deleteBtn (){
-//      $('#deleteBtn').remove(${employee.salary}) //cant get button working
-//  }
+ function deleteBtn (){
+    //  $('#deleteBtn').remove(${employee.salary}) //cant get button working
+    $(this).closest('tr').remove();
+    // employees.pop() //delete employee
+ }
 
 
